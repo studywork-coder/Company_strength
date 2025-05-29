@@ -3,75 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ptc company strength</title></title>
+    <title>PTC Company Strength</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-    body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    /*color: #333;*/
-    line-height: 1.6;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
 
-header {
-    background-color: #333;
-    padding: 1rem 0;
-    background-image: url('IMG-20250529-WA0327.jpg');
-    background-size: cover;
-    background-position: center;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* White shadow for black text */
-    /* ... other styles */
-    
-}
+        header {
+            /* Your specific background color goes here. Replace #ff5733 with your color! */
+            background-color: #ff5733;
+            padding: 1rem 0;
+            text-align: center; /* Centers inline content within the header */
+            position: relative; /* Essential for positioning child elements absolutely */
+            min-height: 400px; /* Adjust this height to fit your image and headings comfortably */
+            display: flex; /* Use flexbox to help structure content */
+            flex-direction: column;
+            justify-content: center; /* Centers content vertically if not absolutely positioned */
+            align-items: center; /* Centers content horizontally */
+            overflow: hidden; /* Ensures image doesn't spill outside header if too large */
+        }
 
-main {
-    padding: 20px;
-    max-width: 960px;
-    margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+        .cover-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* This makes the image cover the entire header area */
+            z-index: 1; /* Places the image behind the text */
+        }
 
-iframe {
-    border: 1px solid #ddd;
-    width: 100%;
-    min-height: 500px; /* Adjust as needed */
-}
+        .header-content {
+            position: absolute; /* Positions this content block absolutely within the header */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Pushes the first item to top, last to bottom */
+            align-items: center; /* Centers items horizontally */
+            z-index: 2; /* Ensures text is on top of the image */
+            color: #fff; /* White color for headings */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Darker shadow for better contrast */
+        }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-    background-color: #333;
-    color: #fff;
-}
-  h1 {
-    background-image: url('IMG-20250529-WA0327.jpg');
-    background-size: cover;
-    background-position: center;
-      color: black; 
-      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* White shadow for black text */
-    /* ... other styles */
-h2  {
+        .header-content h1 {
+            margin-top: 20px; /* Adjust this value for vertical spacing from the top */
+            font-size: 2.8em; /* Make the main heading prominent */
+            padding: 0 20px; /* Add some horizontal padding */
+            box-sizing: border-box; /* Include padding in the element's total width */
+        }
 
-    texts-align: centre top;
-    color: #fff;
-          
-}
-  h3{
+        .header-content h3 {
+            margin-bottom: 20px; /* Adjust this value for vertical spacing from the bottom */
+            font-size: 1.8em; /* Adjust font size for the bottom heading */
+            padding: 0 20px; /* Add some horizontal padding */
+            box-sizing: border-box; /* Include padding in the element's total width */
+        }
 
-      texts-align: centre bottom;
-      color: #fff;
-      }
+        main {
+            padding: 20px;
+            max-width: 960px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        iframe {
+            border: 1px solid #ddd;
+            width: 100%;
+            min-height: 500px; /* Adjust as needed for the spreadsheet viewer */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1> </h1>
-        <h2> Welcome to PTC company</h2>
-        <h3>Data Website!</h3>
+        <img src="IMG-20250529-WA0327.jpg" alt="Company Cover Image" class="cover-image">
+
+        <div class="header-content">
+            <h1>Welcome to PTC Company</h1>
+            <h3>Data Website!</h3>
+        </div>
     </header>
 
     <main>
